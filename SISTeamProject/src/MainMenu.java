@@ -5,9 +5,12 @@ public class MainMenu
 		{
 		q1();
 		}
-		public static String q1()
+		public static void q1()
 		{
-			String openingQ= "Welcome";
-			return openingQ;
+			System.out.println("Welcome! What would you like to do?");
+			System.out.println("1. Add or Delete a student");
+			System.out.println("2. Change student Grades/Schedule");
+			System.out.println("3. Sort students");
+
 		}
 	}

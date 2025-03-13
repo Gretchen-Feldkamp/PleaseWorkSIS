@@ -3,7 +3,7 @@ public class MainMenu
 	{
 		public static void main (String args[])
 		{
-		q1();
+		String q1 = q1();
 		}
 		public static String q1()
 		{

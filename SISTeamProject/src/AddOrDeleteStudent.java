@@ -30,8 +30,14 @@ public class AddOrDeleteStudent
 			}
 		public static void op1()
 		{
-			
-			
+			try
+				{
+			Scanner myFile = new Scanner(new File("StudentList.txt"));
+			while(myFile.hasNext())
+				{
+				String sentence = myFile.nextLine();
+				}
+			catch()
 			
 //			System.out.println("Please list your student's full name:");
 //			Scanner a1 = new Scanner(System.in);

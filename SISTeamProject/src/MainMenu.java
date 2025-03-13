@@ -22,12 +22,12 @@ public class MainMenu
 			else if(answerS.equals("2"))
 				{
 					System.out.println("2");
-					//sally meathod
+					//sally method
 				}
 			else if(answerS.equals("3"))
 				{
 					System.out.println("3");
-					//Keaton meathod
+					//Keaton method
 				}
 			else
 				{

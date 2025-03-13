@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class AddOrDeleteStudent
 	{
 
@@ -26,7 +27,11 @@ public class AddOrDeleteStudent
 			}
 		public static void op1()
 		{
-			System.out.println("1");
+			System.out.println("Please list your student's full name:");
+			Scanner a1 = new Scanner(System.in);
+			String studeName=a1.nextLine();
+			System.out.println("First period class and letter grade:");
+			
 		}
 		
 		public static void op2()

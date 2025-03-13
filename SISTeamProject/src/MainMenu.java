@@ -3,9 +3,9 @@ public class MainMenu
 	{
 		public static void main (String args[])
 		{
-		q1();
+		displayMenu();
 		}
-		public static void q1()
+		public static void displayMenu()
 		{
 			Scanner answer= new Scanner(System.in);
 			System.out.println("Welcome! What would you like to do?");
@@ -30,7 +30,7 @@ public class MainMenu
 			else
 				{
 					System.out.println("Please select a valid option.");
-					q1();
+					displayMenu();
 				}
 
 		}

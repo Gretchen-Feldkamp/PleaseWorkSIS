@@ -15,7 +15,22 @@ public class MainMenu
 			String answerS = answer.nextLine();
 			if(answerS.equals("1"))
 				{
-					
+					AddOrDeleteStudent.studentMain();
+				}
+			else if(answerS.equals("2"))
+				{
+					System.out.println("2");
+					//sally meathod
+				}
+			else if(answerS.equals("3"))
+				{
+					System.out.println("3");
+					//Keaton meathod
+				}
+			else
+				{
+					System.out.println("Please select a valid option.");
+					q1();
 				}
 
 		}

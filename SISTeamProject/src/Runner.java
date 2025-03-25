@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Runner
 	{
 
@@ -17,9 +15,14 @@ public class Runner
 					{
 						System.out.println("Which grade would you like to change?");
 					}
-				else
+				if(number == 2)
 					{
 						System.out.println("Which class would you like to change?");
+					}
+				else
+					{
+						System.out.println("That is not an option.");
+						
 					}
 
 			}

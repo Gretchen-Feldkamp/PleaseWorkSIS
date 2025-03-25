@@ -2,39 +2,48 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+
 public class StudentSorter
 	{
-		public static void main (String args[]) throws IOException
-		{
-			ArrayList<StudentSorter> Student = new ArrayList<>();
+		public static void sortStudents()
+			{
+				Scanner choice = new Scanner(System.in);
+				System.out.println("1) Sort by last name");
+				System.out.println("2) Sort by GPA");
+				System.out.println("3) Sort by period");
+				String choiceC= choice.nextLine();
+				if(choiceC.equals("1"))
+					{
+						sortLastName();
+					}
+				else if(choiceC.equals("2"))
+					{
+						sortGPA();
+					}
+				else if(choiceC.equals("3"))
+					{
+						sortPeriod();
+					}
+			}
+		
+			ArrayList<StudentSorter> students = new ArrayList<>();
+			public static void main(String[]args) throws IOException
+			{
 			getStudentList();
 			sortStudents();
-		}
+			}
+	
 		public static void getStudentList() throws IOException
 		{
-			Scanner Student = new Scanner(new File("StudentList.txt"));
+			Scanner fileScanner = new Scanner(new File("StudentList.txt"));
+			while(fileScanner.hasNextLine())
+				{
+					
+				}
 		}
 		
-		public static void sortStudents()
-		{
-			Scanner choice = new Scanner(System.in);
-			System.out.println("1) Sort by last name");
-			System.out.println("2) Sort by GPA");
-			System.out.println("3) Sort by period");
-			String choiceC= choice.nextLine();
-			if(choiceC.equals("1"))
-				{
-					sortLastName();
-				}
-			else if(choiceC.equals("2"))
-				{
-					sortGPA();
-				}
-			else if(choiceC.equals("3"))
-				{
-					sortPeriod();
-				}
-		}
+
 		
 		public static void sortLastName()
 		{

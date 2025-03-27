@@ -88,10 +88,10 @@ static int counter = 0;
 					int studentIndex = studr.nextInt();
 					for(int i = 0; i<StudentArrayMaker.studentList.size(); i++)
 						{
-							if(counter==studentIndex)
+							if(counter==studentIndex-1)
 							{
 							System.out.println("Found the student!");
-							StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i).getIndex());
+							StudentArrayMaker.studentList.remove(i);
 							}
 						}
 					System.out.println("Deleted Student!");

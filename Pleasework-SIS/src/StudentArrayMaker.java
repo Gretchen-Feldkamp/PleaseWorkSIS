@@ -28,18 +28,8 @@ public class StudentArrayMaker
 					{
 						System.out.print(counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
-						System.out.print(" " + S.getPeriodone());
-						System.out.print(" " + S.getPeriodoneg());
-						System.out.print(" " + S.getPeriodTwo());
-						System.out.print(" " + S.getPeriodTwog());
-						System.out.print(" " + S.getPeriodThree());
-						System.out.print(" " + S.getPeriodThreeg());
 						System.out.println("");
 						counter ++;
-						if(counter>24)
-							{
-								counter =0;
-							}
 					}
 					}
 				catch(NullPointerException x)

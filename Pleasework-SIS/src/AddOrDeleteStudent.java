@@ -50,12 +50,6 @@ public class AddOrDeleteStudent
 					{
 						System.out.print(StudentArrayMaker.counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
-						System.out.print(" " + S.getPeriodone());
-						System.out.print(" " + S.getPeriodoneg());
-						System.out.print(" " + S.getPeriodTwo());
-						System.out.print(" " + S.getPeriodTwog());
-						System.out.print(" " + S.getPeriodThree());
-						System.out.print(" " + S.getPeriodThreeg());
 						System.out.println("");
 					}
 				}
@@ -77,31 +71,24 @@ public class AddOrDeleteStudent
 				{
 					System.out.println("What student would you like to delete?");
 					Scanner studr = new Scanner(System.in);
-					int studentIndex = studr.nextInt();
-					for(Student S: StudentArrayMaker.studentList)
+					String studentIndex = studr.next();
+					for(int i = 0; i<StudentArrayMaker.studentList.size(); i++)
 						{
-							
-							if(StudentArrayMaker.studentList.contains(studentIndex))
+							if(StudentArrayMaker.studentList.get(i).getLastname().equals(studentIndex))
 								{
 									System.out.println("Found the student!");
-									((Collection<Student>) S).remove(studentIndex);
-									for(Student T: StudentArrayMaker.studentList)
-										{
-											System.out.print(T.getFirstname());
-											System.out.print(" " + T.getLastname());
-											System.out.print(" " + T.getPeriodone());
-											System.out.print(" " + T.getPeriodoneg());
-											System.out.print(" " + T.getPeriodTwo());
-											System.out.print(" " + T.getPeriodTwog());
-											System.out.print(" " + T.getPeriodThree());
-											System.out.print(" " + T.getPeriodThreeg());
-											System.out.println("");
-										}
+									StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i));
+//									for(Student T: StudentArrayMaker.studentList)
+//										{
+//											System.out.print(T.getFirstname());
+//											System.out.print(" " + T.getLastname());
+//											System.out.println("");
+//										}
 								}
-							else {
-								System.out.println("Student doesn't exist. Please enter a different student");
-								op2();
-							}
+						else	
+						{
+							System.out.println("Student doesn't exist. Please enter a different student");
+						}
 						}
 				}
 			catch(NullPointerException x)

@@ -18,7 +18,7 @@ class Student
         this.grade3 = convertToGPA(grade3);
     }
 
-    // Convert letter grade to GPA
+
     private double convertToGPA(String grade) 
     	{
         switch (grade) 
@@ -35,17 +35,17 @@ class Student
             case "D+": return 1.3;
             case "D": return 1.0;
             case "D-": return 0.7;
-            default: return 0.0; // F or invalid grades
+            default: return 0.0; 
         }
     }
 
-    // Calculate average GPA
+
     public double getGPA() 
     {
         return (grade1 + grade2 + grade3) / 3.0;
     }
 
-    // Display student info
+
     public String toString()
     {
         return firstName + " " + lastName + " | GPA: " + String.format("%.2f", getGPA());
@@ -54,7 +54,7 @@ class Student
 
 public class StudentSorter 
 {
-    static ArrayList<Student> students = new ArrayList<>();
+    static ArrayList<Student> studentList = new ArrayList<Student>();
 
     public static void main(String[] args) throws IOException 
     {
@@ -62,7 +62,7 @@ public class StudentSorter
         sortStudents();
     }
 
-    // Read students from file
+
     public static void getStudentList() throws IOException 
     {
         Scanner file = new Scanner(new File("StudentList.txt"));
@@ -71,112 +71,67 @@ public class StudentSorter
             String[] data = file.nextLine().split(","); // Split by commas
             if (data.length == 5) 
             {
-                students.add(new Student(data[0], data[1], data[2], data[3], data[4]));
+                studentList.add(new Student(data[0], data[1], data[2], data[3], data[4]));
             }
         }
         file.close();
     }
 
-    // Ask user how to sort
     public static void sortStudents() 
     	{
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("1) Sort by last name");
-        System.out.println("2) Sort by GPA");
-        String choice = scanner.nextLine();
+    		        Scanner choice = new Scanner(System.in);
+    		        System.out.println("Choose sorting method:");
+    		        System.out.println("1) Sort by Last Name");
+    		        System.out.println("2) Sort by GPA");
+    		        System.out.println("3) Sort by Period");
+    		        String choiceC = choice.nextLine();
 
-        if (choice.equals("1")) 
-        	{
-            students.sort(Comparator.comparing(s -> s.lastName));
-        }
-        else if (choice.equals("2")) 
-        {
-            students.sort(Comparator.comparing(Student::getGPA).reversed());
-        } 
-        else 
-        {
-            System.out.println("Invalid choice.");
-            return;
-        }
+    		        if (choiceC.equals("1")) 
+    		        {
+    		            sortLastName();
+    		        } 
+    		        else if (choiceC.equals("2")) 
+    		        {
+    		            sortGPA();
+    		        } 
+    		        else if (choiceC.equals("3")) 
+    		        {
+    		            sortPeriod();
+    		        } 
+    		        else 
+    		        {
+    		            System.out.println("Invalid choice. Exiting.");
+    		            return;
+    		        }
 
-        System.out.println("Sorted Students:");
-        for (Student s : students) 
-        {
-            System.out.println(s);
-        }
+    		        displayStudents();
+    		        choice.close();
+    		    }
 
-        scanner.close();
-    }
+
+	public static void sortLastName()
+		{
+
+		}
+	public static void sortGPA()
+		{
+		
+		}
+	public static void sortPeriod()
+		{
+		
+		}
+	
+	   public static void displayStudents()
+		   {
+	        for (Student s : studentList)
+	        	{
+	            System.out.println(s);
+	        	}
+		   }
+
+
 }
 
 
 
-
-
-
-//public class StudentSorter
-//	{
-//		public static void sortStudents()
-//			{
-//				Scanner choice = new Scanner(System.in);
-//				System.out.println("1) Sort by last name");
-//				System.out.println("2) Sort by GPA");
-//				System.out.println("3) Sort by period");
-//				String choiceC= choice.nextLine();
-//				if(choiceC.equals("1"))
-//					{
-//						sortLastName();
-//					}
-//				else if(choiceC.equals("2"))
-//					{
-//						sortGPA();
-//					}
-//				else if(choiceC.equals("3"))
-//					{
-//						sortPeriod();
-//					}
-//			}
-//		
-//			ArrayList<StudentSorter> students = new ArrayList<>();
-//			public static void main(String[]args) throws IOException
-//			{
-//			getStudentList();
-//			sortStudents();
-//			}
-//	
-//		public static void getStudentList() throws IOException
-//		{
-//			Scanner fileScanner = new Scanner(new File("StudentList.txt"));
-//			while(fileScanner.hasNextLine())
-//				{
-//					
-//				}
-//		}
-//		
-//
-//		
-//		public static void sortLastName()
-//		{
-////			ArrayList<StudentList> Student = new ArrayList<>();
-////			getTextFile();
-////		}
-////		
-////	public static void getTextFile() throws IOException
-////	{
-////		Scanner file = new Scanner(new File("newTextFile.txt"));
-////		while(file.hasNext())
-////			{
-////				String firstName = file.next();
-////				Student.add(new Student(String f, String l))
-////			    System.out.println(firstName);
-//		}
-//		
-//		public static void sortGPA()
-//		{
-//				//ufhuvbjdvj
-//		}
-//		public static void sortPeriod()
-//		{
-//			//isegvv
-//		}
-//	}

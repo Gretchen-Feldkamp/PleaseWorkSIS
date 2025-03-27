@@ -36,6 +36,10 @@ public class StudentArrayMaker
 						System.out.print(" " + S.getPeriodThreeg());
 						System.out.println("");
 						counter ++;
+						if(counter>24)
+							{
+								counter =0;
+							}
 					}
 					}
 				catch(NullPointerException x)

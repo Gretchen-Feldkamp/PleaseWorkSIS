@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -76,15 +77,14 @@ public class AddOrDeleteStudent
 				{
 					System.out.println("What student would you like to delete?");
 					Scanner studr = new Scanner(System.in);
-					String stude = studr.nextLine();
-					String[] studInfod = stude.split(" ");
+					int studentIndex = studr.nextInt();
 					for(Student S: StudentArrayMaker.studentList)
 						{
-							studInfod[0]=S.getFirstname();
-							studInfod[1]=S.getLastname();
-							if(StudentArrayMaker.studentList.contains(studInfod[0]) && StudentArrayMaker.studentList.contains(studInfod[1]))
+							
+							if(StudentArrayMaker.studentList.contains(studentIndex))
 								{
 									System.out.println("Found the student!");
+									((Collection<Student>) S).remove(studentIndex);
 									for(Student T: StudentArrayMaker.studentList)
 										{
 											System.out.print(T.getFirstname());

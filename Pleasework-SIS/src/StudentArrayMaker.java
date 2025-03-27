@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class StudentArrayMaker
 	{
-		static int counter=1;
 		static ArrayList<Student> studentList = new ArrayList<Student>();
 		public static void main(String[] args)
 		{
@@ -21,15 +20,7 @@ public class StudentArrayMaker
 					{
 					String nextLn = myFile.nextLine();
 					String[] studInfoMaster = nextLn.split(" ");
-					studentList.add(new Student(studInfoMaster[0], studInfoMaster[1], studInfoMaster[2], studInfoMaster[3], studInfoMaster[4], studInfoMaster[5], studInfoMaster[6], studInfoMaster[7]));
-					}
-				System.out.println(studentList.size());
-					for(Student S: studentList)
-					{
-						System.out.print(counter + ") " + S.getFirstname());
-						System.out.print(" " + S.getLastname());
-						System.out.println("");
-						counter ++;
+					studentList.add(new Student(AddOrDeleteStudent.counter, studInfoMaster[0], studInfoMaster[1], studInfoMaster[2], studInfoMaster[3], studInfoMaster[4], studInfoMaster[5], studInfoMaster[6], studInfoMaster[7]));
 					}
 					}
 				catch(NullPointerException x)

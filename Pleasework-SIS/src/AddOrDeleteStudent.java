@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class AddOrDeleteStudent
 	{
-
+static int counter = 0;
 		public static void studentMain()
 			{
 				Scanner answer= new Scanner(System.in);
@@ -38,6 +38,13 @@ public class AddOrDeleteStudent
 			try
 				{
 					StudentArrayMaker.armain();
+					for(Student S: StudentArrayMaker.studentList)
+						{
+							System.out.print(counter + ") " + S.getFirstname());
+							System.out.print(" " + S.getLastname());
+							System.out.println("");
+							counter ++;
+						}
 				System.out.println("Please enter your student's fullname,"
 						+ " first period class, grade for first period,"
 						+ " second period class, grade for second period,"
@@ -45,10 +52,10 @@ public class AddOrDeleteStudent
 				Scanner studi = new Scanner(System.in);
 				String stud = studi.nextLine();
 				String[] studInfo = stud.split(" ");
-				StudentArrayMaker.studentList.add(new Student(studInfo[0], studInfo[1], studInfo[2], studInfo[3], studInfo[4], studInfo[5], studInfo[6], studInfo[7]));
+				StudentArrayMaker.studentList.add(new Student(counter, studInfo[0], studInfo[1], studInfo[2], studInfo[3], studInfo[4], studInfo[5], studInfo[6], studInfo[7]));
 				for(Student S: StudentArrayMaker.studentList)
 					{
-						System.out.print(StudentArrayMaker.counter + ") " + S.getFirstname());
+						System.out.print(counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
 						System.out.println("");
 					}
@@ -69,26 +76,30 @@ public class AddOrDeleteStudent
 			StudentArrayMaker.armain();
 			try
 				{
+					for(Student S: StudentArrayMaker.studentList)
+					{
+						counter ++;
+						System.out.print(counter + ") " + S.getFirstname());
+						System.out.print(" " + S.getLastname());
+						System.out.println("");
+					}
 					System.out.println("What student would you like to delete?");
 					Scanner studr = new Scanner(System.in);
-					String studentIndex = studr.next();
+					int studentIndex = studr.nextInt();
 					for(int i = 0; i<StudentArrayMaker.studentList.size(); i++)
 						{
-							if(StudentArrayMaker.studentList.get(i).getLastname().equals(studentIndex))
-								{
-									System.out.println("Found the student!");
-									StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i));
-//									for(Student T: StudentArrayMaker.studentList)
-//										{
-//											System.out.print(T.getFirstname());
-//											System.out.print(" " + T.getLastname());
-//											System.out.println("");
-//										}
-								}
-						else	
-						{
-							System.out.println("Student doesn't exist. Please enter a different student");
+							if(counter==studentIndex)
+							{
+							System.out.println("Found the student!");
+							StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i));
+							}
 						}
+					System.out.println("Deleted Student!");
+					for(Student S: StudentArrayMaker.studentList)
+						{
+							System.out.print(S.getFirstname());
+							System.out.print(" " + S.getLastname());
+							System.out.println("");
 						}
 				}
 			catch(NullPointerException x)

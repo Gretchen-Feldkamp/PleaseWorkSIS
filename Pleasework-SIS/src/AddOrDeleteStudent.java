@@ -47,7 +47,7 @@ public class AddOrDeleteStudent
 				StudentArrayMaker.studentList.add(new Student(studInfo[0], studInfo[1], studInfo[2], studInfo[3], studInfo[4], studInfo[5], studInfo[6], studInfo[7]));
 				for(Student S: StudentArrayMaker.studentList)
 					{
-						System.out.print(S.getFirstname());
+						System.out.print(StudentArrayMaker.counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
 						System.out.print(" " + S.getPeriodone());
 						System.out.print(" " + S.getPeriodoneg());

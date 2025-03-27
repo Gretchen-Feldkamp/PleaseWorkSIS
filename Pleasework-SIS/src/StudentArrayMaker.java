@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class StudentArrayMaker
 	{
+		static int counter=1;
 		static ArrayList<Student> studentList = new ArrayList<Student>();
 		public static void main(String[] args)
 		{
@@ -22,9 +23,9 @@ public class StudentArrayMaker
 					String[] studInfoMaster = nextLn.split(" ");
 					studentList.add(new Student(studInfoMaster[0], studInfoMaster[1], studInfoMaster[2], studInfoMaster[3], studInfoMaster[4], studInfoMaster[5], studInfoMaster[6], studInfoMaster[7]));
 					}
-				for(Student S: studentList)
+					for(Student S: studentList)
 					{
-						System.out.print(S.getFirstname());
+						System.out.print(counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
 						System.out.print(" " + S.getPeriodone());
 						System.out.print(" " + S.getPeriodoneg());
@@ -33,6 +34,7 @@ public class StudentArrayMaker
 						System.out.print(" " + S.getPeriodThree());
 						System.out.print(" " + S.getPeriodThreeg());
 						System.out.println("");
+						counter ++;
 					}
 					}
 				catch(NullPointerException x)

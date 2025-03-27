@@ -91,16 +91,10 @@ static int counter = 0;
 							if(counter==studentIndex)
 							{
 							System.out.println("Found the student!");
-							StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i));
+							StudentArrayMaker.studentList.remove(StudentArrayMaker.studentList.get(i).getIndex());
 							}
 						}
 					System.out.println("Deleted Student!");
-					for(Student S: StudentArrayMaker.studentList)
-						{
-							System.out.print(S.getFirstname());
-							System.out.print(" " + S.getLastname());
-							System.out.println("");
-						}
 				}
 			catch(NullPointerException x)
 				{

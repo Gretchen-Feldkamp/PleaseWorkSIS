@@ -68,7 +68,7 @@ public class StudentSorter
         Scanner file = new Scanner(new File("StudentList.txt"));
         while (file.hasNextLine()) 
         {
-            String[] data = file.nextLine().split(","); // Split by commas
+            String[] data = file.nextLine().split(",");
             if (data.length == 5) 
             {
                 studentList.add(new Student(data[0], data[1], data[2], data[3], data[4]));

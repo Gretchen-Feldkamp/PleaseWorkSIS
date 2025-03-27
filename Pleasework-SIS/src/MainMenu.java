@@ -22,7 +22,7 @@ public class MainMenu
 			else if(answerS.equals("2"))
 				{
 					System.out.println("2");
-					//sally method
+//					studentSorter();
 				}
 			else if(answerS.equals("3"))
 				{

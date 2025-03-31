@@ -22,11 +22,12 @@ public class MainMenu
 			else if(answerS.equals("2"))
 				{
 					System.out.println("2");
-//					studentSorter();
+					//sally method
 				}
 			else if(answerS.equals("3"))
 				{
-					StudentSorter.sortStudents();
+					System.out.println("3");
+					//Keaton method
 				}
 			else
 				{

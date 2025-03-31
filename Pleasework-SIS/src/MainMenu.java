@@ -21,8 +21,7 @@ public class MainMenu
 				}
 			else if(answerS.equals("2"))
 				{
-					System.out.println("2");
-//					studentSorter();
+					Runner.Gradmain();
 				}
 			else if(answerS.equals("3"))
 				{

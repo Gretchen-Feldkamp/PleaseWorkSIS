@@ -55,6 +55,8 @@ static int counter = 0;
 				StudentArrayMaker.studentList.add(new Student(counter, studInfo[0], studInfo[1], studInfo[2], studInfo[3], studInfo[4], studInfo[5], studInfo[6], studInfo[7]));
 				for(Student S: StudentArrayMaker.studentList)
 					{
+						counter=0;
+						counter++;
 						System.out.print(counter + ") " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
 						System.out.println("");

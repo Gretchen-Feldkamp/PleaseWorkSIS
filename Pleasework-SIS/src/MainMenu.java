@@ -26,8 +26,7 @@ public class MainMenu
 				}
 			else if(answerS.equals("3"))
 				{
-					System.out.println("3");
-					//Keaton method
+					StudentSorter.sortStudents();
 				}
 			else
 				{

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class RunnerGrade
 	{
-		public static void main (String args[])
+		public static void Gradmain ()
 			{
 
 				Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class RunnerGrade
 				else
 					{
 						System.out.println("That is not an option.");
-						
+						Gradmain();
 					}
 
 			}

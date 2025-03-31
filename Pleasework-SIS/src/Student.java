@@ -11,11 +11,11 @@ public class Student
 		private String PeriodThreeg;
 		private int Indexstud;
 		
-		public Student(int index, String firstname, String lastname, String periodone, String periodoneg, String periodTwo,
+		public Student(int indexstud, String firstname, String lastname, String periodone, String periodoneg, String periodTwo,
 				String periodTwog, String periodThree, String periodThreeg)
 			{
 				super();
-				Indexstud = index;
+				Indexstud = indexstud;
 				Firstname = firstname;
 				Lastname = lastname;
 				Periodone = periodone;
@@ -27,15 +27,15 @@ public class Student
 			}
 
 
-		public int getIndex()
+		public int getIndexstud()
 			{
 				return Indexstud;
 			}
 
 
-		public void setIndex(int index)
+		public void setIndex(int indexstud)
 			{
-				Indexstud = index;
+				Indexstud = indexstud;
 			}
 
 

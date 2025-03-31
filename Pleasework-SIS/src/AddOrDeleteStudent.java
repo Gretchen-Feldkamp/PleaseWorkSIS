@@ -41,7 +41,7 @@ static int counter = 0;
 					for(Student S: StudentArrayMaker.studentList)
 						{
 							counter ++;
-							System.out.print(counter + ") " + S.getFirstname());
+							System.out.print(counter + ". " + S.getFirstname());
 							System.out.print(" " + S.getLastname());
 							System.out.println("");
 						}
@@ -57,7 +57,7 @@ static int counter = 0;
 				for(Student S: StudentArrayMaker.studentList)
 					{
 						counter++;
-						System.out.print(counter + ") " + S.getFirstname());
+						System.out.print(counter + ". " + S.getFirstname());
 						System.out.print(" " + S.getLastname());
 						System.out.println("");
 					}

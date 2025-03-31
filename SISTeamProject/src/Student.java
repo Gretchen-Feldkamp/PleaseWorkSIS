@@ -1,3 +1,4 @@
+
 public class Student
 	{
 		private String Firstname;
@@ -8,13 +9,11 @@ public class Student
 		private String PeriodTwog;
 		private String PeriodThree;
 		private String PeriodThreeg;
-		private int Indexstud;
 		
-		public Student(int indexstud, String firstname, String lastname, String periodone, String periodoneg, String periodTwo,
+		public Student(String firstname, String lastname, String periodone, String periodoneg, String periodTwo,
 				String periodTwog, String periodThree, String periodThreeg)
 			{
 				super();
-				Indexstud = indexstud;
 				Firstname = firstname;
 				Lastname = lastname;
 				Periodone = periodone;
@@ -24,19 +23,6 @@ public class Student
 				PeriodThree = periodThree;
 				PeriodThreeg = periodThreeg;
 			}
-
-
-		public int getIndexstud()
-			{
-				return Indexstud;
-			}
-
-
-		public void setIndex(int indexstud)
-			{
-				Indexstud = indexstud;
-			}
-
 
 		public String getFirstname()
 			{
